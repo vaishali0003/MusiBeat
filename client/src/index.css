@@ -1,0 +1,88 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main{
+  width: 100%;
+  min-height: 90vh;
+}
+
+.components{
+  display: flex;
+}
+
+/* SIDEBAR CSS */
+.side_bar{
+  width: 14%;
+  min-height: 100vh;
+  background-color: #202776;
+}
+
+.side_menu{
+  padding-top: 6rem;
+}
+
+.side_menu_content{
+  display: flex;
+  align-items: center;
+  margin: 1.2rem 0;
+  filter: invert(1);
+}
+
+.side_menu_content_txt{
+  margin-left: 0.8rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  font-weight: 500;
+}
+
+.logo1{
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  margin-left: 1.6rem;
+}
+
+.logo1_txt{
+  margin-left: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0 !important;
+}
+
+.logo1_img{
+  width: 43px;
+}
+
+.content_img{
+  width: 17px !important;
+}
+
+/* MIDDLE COMPONENT CSS */
+.middle1{
+  width: 86%;
+  padding: 3rem 1.7rem;
+}
+
+.middle1 img{
+  width: 100%;
+  height: 20vh;
+}
+
+/* slider css */
