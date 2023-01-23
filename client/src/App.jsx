@@ -1,15 +1,16 @@
 import React from 'react'
-import MiddleComponent from './Components/MiddleComponent'
-import SideBar from './Components/SideBar'
+import Home from './Components/Home'
+import AdminPanel from './Components/Admin/AdminPanel'
+import {Routes,Route} from 'react-router-dom'
 
 const App = () => {
   return (
     <>
      <div className="main">
-      <div className="components">
-      <SideBar/>
-      <MiddleComponent/>
-      </div>
+     <Routes>
+     <Route path='/' element={<Home/>}/>
+     <Route path='/admin' element={<AdminPanel/>}/>
+    </Routes>
     </div>
     </>
   )

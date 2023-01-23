@@ -1,26 +1,11 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .main{
   width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
+  height: 1px;
 }
 
 .components{
@@ -85,4 +70,75 @@ code {
   height: 20vh;
 }
 
-/* slider css */
+.popular_hits{
+  margin: 2rem 0;
+}
+
+.img_part{
+  position: relative;
+}
+
+.music_player{
+  height: 3vw;
+  width: 3vw;
+  border: 2px solid;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+    opacity: 0.6;
+    border: 2px solid #ded8d8;
+    display: none;
+}
+
+.music_player .play_pause_img{
+  width: 90%;
+  height: 90%;
+}
+
+.img_part:hover .music_player{
+  display: flex;
+}
+
+
+/* ADMIN PANEL CSS */
+
+.adminPanel{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.adminPanel1{
+  width: 55%;
+  display: flex;
+  height: 100%;
+}
+
+.admin_sidebar{
+  display: flex;
+  height: 100%;
+  width: 30%;
+}
+
+.admin_Panelform{
+  width: 65%;
+  padding: 1.6rem 4rem;
+}
+
+.admin_Panelform form{
+  margin: 1.4rem 0;
+}
+
+.data_table{
+  width: 100%;
+  padding: 2rem 1.8rem;
+}
+
+.data_table_header{
+  display: flex;
+  width: 100%;
+}

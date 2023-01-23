@@ -3,10 +3,20 @@ import { useEffect, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import popularTracks from './PopularTracks';
+// var jsmediatags = require("jsmediatags");
 
 const MiddleComponent = () => {
 
     const [popular, setpopular] = useState(popularTracks);
+
+    // jsmediatags.read("assets/Ghodey_Pe_Sawaar.mp3", {
+    //     onSuccess: function(tag) {
+    //       console.log(tag);
+    //     },
+    //     onError: function(error) {
+    //       console.log(':(', error.type, error.info);
+    //     }
+    //   });
 
     return (
         <>
@@ -26,12 +36,17 @@ const MiddleComponent = () => {
                     >
                         {popular.map((item, index) => {
                             return (
-                                <React.Fragment>
-                                    <SplideSlide key={index}>
-                                        <img src={item.image} alt={`img${item.id}`}/>
+                                <React.Fragment key={index}>
+                                    <SplideSlide>
+                                        <div className="img_part">
+                                        <img src={item.image} alt="pict" style={{'borderRadius':'5px'}}/>
+                                       <div className="music_player">
+                                         <img src="assets/pause1.png" className='play_pause_img' id="pause" alt="pict" />
+                                       </div>
+                                        </div>
+                                        <p className="song_name_p1" style={{'marginBottom':0}}>{item.name}</p>
+                                        <p className="movie_name_p1">{item.movie}</p>
                                     </SplideSlide>
-                                    <p className="song_name_p1">{item.name}</p>
-                                    <p className="movie_name_p1">{item.movie}</p>
                                     </React.Fragment>
                             )
 
@@ -46,7 +61,7 @@ const MiddleComponent = () => {
                             rewind: true,
                             // width : 300,
                             gap: '1rem',
-                            perPage: 8,
+                            perPage: 6,
                             type: 'loop',
                             autoplay: true,
                             height: '15rem'
@@ -54,31 +69,31 @@ const MiddleComponent = () => {
                         aria-label="My Favorite Images"
                     >
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 1" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 2" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 3" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 1" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 2" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 3" />
+                            <img src="assets/demo_img.jpg" alt="pict" />
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 1" />
+                            <img src="assets/demo_img.jpg" alt="pict" />
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 2" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 3" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                     </Splide>
                 </div>
@@ -98,31 +113,31 @@ const MiddleComponent = () => {
                         aria-label="My Favorite Images"
                     >
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 1" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 2" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 3" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 1" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 2" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 3" />
+                            <img src="assets/demo_img.jpg" alt="pict"/>
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 1" />
+                            <img src="assets/demo_img.jpg" alt="pict" />
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 2" />
+                            <img src="assets/demo_img.jpg" alt="pict" />
                         </SplideSlide>
                         <SplideSlide>
-                            <img src="assets/demo_img.jpg" alt="Image 3" />
+                            <img src="assets/demo_img.jpg" alt="pict" />
                         </SplideSlide>
                     </Splide>
                 </div>
