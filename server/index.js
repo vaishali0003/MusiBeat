@@ -1,19 +1,27 @@
-const express=require('express');
-const songs=require('./router/songs');
-const app=express();
+require('dotenv').config();
+const express = require('express');
+const uploadis = require('./router/uploadis');
+const app = express();
 require('./db/conn');
-var cors=require('cors');
+var jsmediatags = require("jsmediatags");
+var cors = require('cors');
+const bodyParser = require('body-parser');
 
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.json());
-const port=process.env.port||5100;
+app.use(express.urlencoded({ extended: true }));
 
-// app.get('/home',async(req,res)=>{
-// res.send('hello');
-// })
+const port = process.env.port || 5100;
 
-app.use('/songs',songs);
+app.use('/uploads', express.static('uploads'));
+app.use('/uploadis', uploadis);
 
-app.listen(port,()=>{
-console.log(`listening to port ${port}`);
+const btoa = require('btoa');
+const b64 = btoa("stringToEncode");
+var base64 = require('base-64');
+
+app.listen(port, () => {
+    console.log(`listening to port ${port}`);
 })

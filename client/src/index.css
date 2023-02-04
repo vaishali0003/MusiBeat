@@ -15,11 +15,16 @@
 /* SIDEBAR CSS */
 .side_bar{
   width: 14%;
+  height: 1px;
   min-height: 100vh;
   background-color: #202776;
 }
 
-.side_menu{
+.side_bar1{
+  height: 100%;
+}
+
+/* .side_menu{
   padding-top: 6rem;
 }
 
@@ -35,9 +40,9 @@
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   font-weight: 500;
-}
+} */
 
-.logo1{
+/* .logo1{
   display: flex;
   align-items: center;
   margin: 1rem 0;
@@ -49,7 +54,7 @@
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 0 !important;
-}
+} */
 
 .logo1_img{
   width: 43px;
@@ -102,6 +107,38 @@
   display: flex;
 }
 
+.play{
+  display: none;
+}
+
+.fav_part{
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: none;
+}
+
+.fav_part img{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.img_part:hover .fav_part{
+  display: block;
+}
+
+/* AUDIO PLAYER CSS */
+
+#audio_player{
+    bottom: 0;
+    position: fixed;
+    width: 83%;
+    display: none;
+}
+
 
 /* ADMIN PANEL CSS */
 
@@ -110,6 +147,12 @@
   align-items: center;
   display: flex;
   height: 100%;
+}
+.play1{
+  display: block;
+}
+.pause1{
+  display: none;
 }
 
 .adminPanel1{
@@ -125,8 +168,20 @@
 }
 
 .admin_Panelform{
-  width: 65%;
-  padding: 1.6rem 4rem;
+  display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 2rem;
+    width: 35rem;
+    box-shadow: 4px 8px 10px #4039392b;
+}
+
+.admin_Panelform img{
+  filter: invert(77%);
+  width: 7rem;
+  position: absolute;
+  top: -5rem;
+  right: 41%;
 }
 
 .admin_Panelform form{
@@ -138,7 +193,24 @@
   padding: 2rem 1.8rem;
 }
 
-.data_table_header{
+.search_bar{
   display: flex;
   width: 100%;
+  margin-bottom: 0.6rem;
 }
+
+
+/* ADDTRACK CSS*/
+.add_song_frm1{
+  display: flex;
+  align-items: center;
+}
+
+.category_selector{
+  margin-top: -1.2rem;
+  margin-left: 0.5rem;
+}
+
+/* #add_song1_frm{
+  display: none;
+} */

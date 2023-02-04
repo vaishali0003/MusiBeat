@@ -1,10 +1,19 @@
 const mongoose=require('mongoose');
 
 const songSchema=mongoose.Schema({
-    songAudio:{
+    title:{
         type:String
     },
+    artist:{
+        type:String
+    },
+    img_url:{
+      type:String
+    },
     category:{
+        type:String
+    },
+    song_url:{
         type:String
     }
 })

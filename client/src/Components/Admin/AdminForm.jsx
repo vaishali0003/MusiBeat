@@ -3,8 +3,7 @@ import React from 'react'
 const AdminForm = () => {
   return (
     <div className='admin_Panelform'>
-    <h2 className="text-lg font-bold">Welcome Vaishali</h2>
-    <h2 className="text-lg font-bold">Login as Admin</h2>
+      <img src="assets/admin.png" alt="" srcset="" />
     <form>
         <div className="mb-6">
             <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>

@@ -1,12 +1,12 @@
 import React from 'react'
-import SideBar from './SideBar'
+import SideBar1 from './SideBar1'
 import MiddleComponent from './MiddleComponent'
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className="components">
-    <SideBar/>
-    <MiddleComponent/>
+    <SideBar1/>
+    <MiddleComponent appFavList={props.appFavList} setAppFavList={props.setAppFavList}/>
     </div>
   )
 }
