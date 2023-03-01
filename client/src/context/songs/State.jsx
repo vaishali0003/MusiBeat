@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Context from "./Context";
 
 const State = (props) => {
-    // const host = 'http://localhost:5100';
     const [flag, setflag] = useState(true);
 
     // add song
@@ -19,6 +18,10 @@ const State = (props) => {
             const data = await response.json();
             // setsongs(songs.concat(data));
             console.log('song added successfully');
+
+            if(data.success){
+                props.showAlert('Song added successfully','success');
+            }
         }
         catch (err) {
             console.log(err);
@@ -28,7 +31,7 @@ const State = (props) => {
 
 
     // fetch all songs
-    const getallsongs = async (categ,val) => {
+    const getallsongs = async (categ, val) => {
         try {
             // API CALL
             const response = await fetch(`http://localhost:5100/uploadis/getallsongs?category=${categ}&search=${val}`, {
@@ -58,6 +61,12 @@ const State = (props) => {
                 body: JSON.stringify({ title, artist, category })
             })
             const data = await response.json();
+            if(data.success){
+                props.showAlert('Song edited successfully','success');
+            }
+            else{
+                props.showAlert(data.message,data.type);
+            }
             console.log(data);
         }
         catch (err) {
@@ -76,8 +85,14 @@ const State = (props) => {
                 },
             })
             const data = await response.json();
-            if(data){
+            if (data.success) {
                 setflag(false);
+            }
+            if(data.success){
+                props.showAlert('Song deleted successfully','success');
+            }
+            else{
+                props.showAlert(data.message,data.type);
             }
         }
         catch (err) {
@@ -87,7 +102,7 @@ const State = (props) => {
     }
 
     return (
-        <Context.Provider value={{ addSong, getallsongs, editNote, deleteNote ,flag}}>
+        <Context.Provider value={{ addSong, getallsongs, editNote, deleteNote, flag }}>
             {props.children}
         </Context.Provider>
     )

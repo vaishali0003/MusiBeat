@@ -4,11 +4,10 @@ import MiddleComponent from './MiddleComponent'
 
 const Home = (props) => {
   return (
-    <div className="components">
-    <SideBar1/>
-    <MiddleComponent appFavList={props.appFavList} setAppFavList={props.setAppFavList}/>
-    </div>
+    <>
+    <MiddleComponent currentPlaylistSong={props.currentPlaylistSong} setCurrentPlaylistSong={props.setCurrentPlaylistSong}/>
+    </>
   )
 }
 
-export default Home
+export default Home;
